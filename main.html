@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sound hewan</title>
+    <link rel="stylesheet" href="style.css" >
+</head>
+<body bgcolor="#DEB887">
+    <header>
+        <h1>Selamat Datang di Sound Hewan</h1>
+
+    </header>
+    <div class="container">
+        <div class="animal" onclick="playSounds('Babi')"">
+            <img src="img/babii.jpg" alt="Babi">
+            <p>Babi</p>
+        </div>
+        <div class="animal" onclick="playSounds('Anjing')"">
+            <img src="img/anjing.jpg" alt="Anjing">
+            <p>Anjing</p>
+        </div>
+        <div class="animal" onclick="playSounds('Kucing')">
+            <img src="img/kucing.jpg" alt="Kucing">
+            <p>Kucing</p>
+        </div>
+        <div class="animal" onclick="playSounds('Burung')">
+            <img src="img/burung tua.jpg" alt="Burung">
+            <p>Burung</p>
+        </div>
+        <div class="animal" onclick="playSounds('Monyet')">
+            <img src="img/monyet.jpg" alt="Monyet">
+            <p>Monyet</p>
+        </div>
+    </div>
+
+<audio id="sound"></audio>
+
+<script>
+        function playSounds(Animal) {
+            const sound = document.getElementById("sound");
+            sound.src = `sound/${Animal}.mp3`;
+            sound.play();
+}
+</script>
+
+</body>
+</html>
